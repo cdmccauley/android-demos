@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidCabFare</string>
+    <string-array name="car_list">
+        <item>Smart Car</item>
+        <item>Sedan</item>
+        <item>Minivan</item>
+    </string-array>
+
+</resources>
