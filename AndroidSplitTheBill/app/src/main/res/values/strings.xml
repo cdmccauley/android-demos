@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidSplitTheBill</string>
+    <string-array name="service_level">
+        <item>Excellent</item>
+        <item>Average</item>
+        <item>Poor</item>
+    </string-array>
+</resources>

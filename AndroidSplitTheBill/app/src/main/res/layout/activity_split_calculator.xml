@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplitCalculator"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Total:"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bill_total"
+        app:layout_constraintEnd_toStartOf="@+id/space" />
+
+    <EditText
+        android:id="@+id/bill_total"
+        android:layout_width="125dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="$ 30.00"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/space"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party Size:"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/party_size"
+        app:layout_constraintEnd_toEndOf="@+id/textView1" />
+
+    <EditText
+        android:id="@+id/party_size"
+        android:layout_width="125dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="3"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/bill_total"
+        app:layout_constraintTop_toBottomOf="@+id/bill_total" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="125dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/service_level"
+        app:layout_constraintStart_toStartOf="@+id/party_size"
+        app:layout_constraintTop_toBottomOf="@+id/party_size" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Rating:"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/textView2" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="24dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost Per Person:"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cost_per_person"
+        app:layout_constraintEnd_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/cost_per_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="$ 0.00"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18% tip included"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</android.support.constraint.ConstraintLayout>
