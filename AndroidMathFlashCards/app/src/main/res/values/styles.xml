@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerDropDownBoxStyle</item>
+        <item name="spinnerDropDownItemStyle">@style/SpinnerDropDownBoxStyle</item>
+    </style>
+
+    <style name="SpinnerDropDownBoxStyle">
+        <item name="android:textAppearance">@style/SpinnerDropDownBoxTextStyle</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="SpinnerDropDownBoxTextStyle">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+</resources>

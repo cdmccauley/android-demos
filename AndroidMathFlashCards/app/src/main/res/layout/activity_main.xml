@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/bottom_number"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_number" />
+
+    <EditText
+        android:id="@+id/top_number"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_number"
+        app:layout_constraintStart_toStartOf="@+id/bottom_number" />
+
+    <EditText
+        android:id="@+id/bottom_number"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/show_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sign"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sign"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:entries="@array/math_symbols"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bottom_number"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/show_button"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="Show Answer"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clear_button" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/show_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

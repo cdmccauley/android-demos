@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidMathFlashCards</string>
+    <string-array name="math_symbols">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+    </string-array>
+</resources>
