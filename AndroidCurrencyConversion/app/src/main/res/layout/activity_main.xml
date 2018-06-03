@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/usd_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="16dp"
+        android:text=": $"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/conversion_symbol"
+        app:layout_constraintEnd_toStartOf="@+id/usd_input"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/usd_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/conversion_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/conversion_label"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/usd_symbol"
+        app:layout_constraintTop_toBottomOf="@+id/usd_symbol" />
+
+    <TextView
+        android:id="@+id/usd_label"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/usd_label"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/usd_symbol"
+        app:layout_constraintEnd_toStartOf="@+id/usd_symbol"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/conversion_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/conversion_types"
+        app:layout_constraintBottom_toBottomOf="@+id/conversion_symbol"
+        app:layout_constraintStart_toStartOf="@+id/usd_label" />
+
+    <TextView
+        android:id="@+id/conversion_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/conversion_symbol"
+        app:layout_constraintEnd_toEndOf="@+id/usd_input"
+        app:layout_constraintStart_toStartOf="@+id/usd_input" />
+
+    <EditText
+        android:id="@+id/usd_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/usd_symbol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/usd_symbol" />
+</android.support.constraint.ConstraintLayout>

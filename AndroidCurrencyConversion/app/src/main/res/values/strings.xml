@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">AndroidCurrencyConversion</string>
+    <string name="usd_label">USD</string>
+    <string name="conversion_label">: $</string>
+
+    <string-array name="conversion_types">
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>MXN</item>
+    </string-array>
+
+</resources>

@@ -8,9 +8,11 @@
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
-        android:id="@+id/answer"
+        android:id="@+id/answer_number"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:textColor="#000"
         android:textSize="40sp"
@@ -43,11 +45,11 @@
         app:layout_constraintBottom_toTopOf="@+id/show_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/sign"
+        app:layout_constraintStart_toEndOf="@+id/operation_sign"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/sign"
+        android:id="@+id/operation_sign"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

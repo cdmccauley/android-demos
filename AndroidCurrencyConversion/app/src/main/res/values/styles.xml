@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:spinnerItemStyle">@style/SpinnerDropDownBoxStyle</item>
+        <item name="spinnerDropDownItemStyle">@style/SpinnerDropDownBoxStyle</item>
+    </style>
+
+    <style name="SpinnerDropDownBoxStyle">
+        <item name="android:textAppearance">@style/SpinnerDropDownBoxTextStyle</item>
+    </style>
+
+    <style name="SpinnerDropDownBoxTextStyle">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+</resources>
