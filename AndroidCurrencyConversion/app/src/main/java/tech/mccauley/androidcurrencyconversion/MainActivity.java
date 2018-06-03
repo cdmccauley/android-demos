@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     final double MXN_RATE = 19.9955;
     double usdInput = 0.00;
     DecimalFormat moneyFormat = new DecimalFormat("0.00");
+    Toast errorToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         conversionTypeComponent = findViewById(R.id.conversion_type);
         conversionSymbolComponent = findViewById(R.id.conversion_symbol);
         conversionResultComponent = findViewById(R.id.conversion_result);
+        errorToast = Toast.makeText(MainActivity.this, "Value must be under 100,000.00", Toast.LENGTH_LONG);
 
         // conversion_type event listener
         conversionTypeComponent.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -86,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
         if (usdInputComponent.getText().length() != 0) {
             usdInput = Double.parseDouble(usdInputComponent.getText().toString());
 
-            if (usdInput > MAX_USD) {
-
+            if (usdInput >= MAX_USD) {
+                errorToast.show();
+                conversionResultComponent.setText("");
             } else {
                 switch (conversionType) {
                     case "CAD":
@@ -101,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
             }
+        } else {
+            conversionResultComponent.setText("");
         }
     }
 }
