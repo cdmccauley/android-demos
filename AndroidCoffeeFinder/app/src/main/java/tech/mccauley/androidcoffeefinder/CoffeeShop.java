@@ -7,14 +7,12 @@ import android.graphics.drawable.Drawable;
 public class CoffeeShop {
 
     private String shopName;
-    private String shopAddress;
     private Drawable shopIcon;
     private Intent shopIntent;
     private Context contextPointer;
 
-    public CoffeeShop(String name, String address, Drawable icon, Intent intent, Context context) {
+    public CoffeeShop(String name, Drawable icon, Intent intent, Context context) {
         shopName = name;
-        shopAddress = address;
         shopIcon = icon;
         shopIntent = intent;
         contextPointer = context;
@@ -22,10 +20,6 @@ public class CoffeeShop {
 
     public String getShopName() {
         return shopName;
-    }
-
-    public String getShopAddress() {
-        return shopAddress;
     }
 
     public Drawable getShopIcon() {

@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
         mResources = this.getResources();
 
         coffeeShops = new CoffeeShop[] {
-                new CoffeeShop("coffeeshop1", "address1", mResources.getDrawable(R.drawable.coffeeshop1), new Intent(MainActivity.this, Starbucks.class), this),
-                new CoffeeShop("coffeeshop2", "address2", mResources.getDrawable(R.drawable.coffeeshop2), new Intent(MainActivity.this, Starbucks.class), this),
-                new CoffeeShop("coffeeshop3", "address3", mResources.getDrawable(R.drawable.coffeeshop3), new Intent(MainActivity.this, Starbucks.class), this)
+                new CoffeeShop("Battlegrounds", mResources.getDrawable(R.drawable.battlegrounds), new Intent(MainActivity.this, Battlegrounds.class), this),
+                new CoffeeShop("Sips", mResources.getDrawable(R.drawable.sips), new Intent(MainActivity.this, Sips.class), this),
+                new CoffeeShop("Starbucks", mResources.getDrawable(R.drawable.starbucks), new Intent(MainActivity.this, Starbucks.class), this),
+                new CoffeeShop("Beans & Brews", mResources.getDrawable(R.drawable.beansandbrews), new Intent(MainActivity.this, BeansAndBrews.class), this)
         };
 
         mRecyclerView = findViewById(R.id.coffee_recycler_view);
