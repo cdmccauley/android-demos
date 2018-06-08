@@ -18,12 +18,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // get recyclerview
         mainRecycler = findViewById(R.id.main_recycler_view);
 
+        // set layoutmanager
         mainRecyclerLayoutManager = new LinearLayoutManager(this);
         mainRecycler.setLayoutManager(mainRecyclerLayoutManager);
 
+        // get techgadgetmanager
         techGadgetManager = new TechGadgetManager(this);
+
+        // set adapter
         mainRecyclerAdapter = new MainRecyclerAdapter(techGadgetManager);
         mainRecycler.setAdapter(mainRecyclerAdapter);
 

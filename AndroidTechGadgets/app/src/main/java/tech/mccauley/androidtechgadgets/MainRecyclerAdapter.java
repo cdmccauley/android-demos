@@ -7,14 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.text.DecimalFormat;
 
 public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder> {
 
+    // declarations
     TechGadgetManager gadgetManager;
 
+    // recyclerview implementation
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ConstraintLayout mainRecyclerRow;
         public ViewHolder(ConstraintLayout c) {
@@ -37,17 +36,24 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
+        // set row event listener
         holder.mainRecyclerRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                // set intent
                 Intent rowIntent = new Intent(gadgetManager.getMainContext(), DetailActivity.class);
-                rowIntent.putExtra("gadgetName", gadgetManager.getManagerGadgets()[position].getGadgetName());
+
+                // add techgadget to intent
+                rowIntent.putExtra("techGadget", gadgetManager.getManagerGadgets()[position]);
+
+                // open detailactivity
                 gadgetManager.getMainContext().startActivity(rowIntent);
 
             }
         });
 
+        // set row title
         TextView gadgetTitle = (TextView) holder.mainRecyclerRow.getChildAt(0);
         gadgetTitle.setText(gadgetManager.getManagerGadgets()[position].getGadgetName());
     }
