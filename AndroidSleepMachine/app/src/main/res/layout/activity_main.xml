@@ -33,7 +33,7 @@
                 app:srcCompat="@drawable/night_sky1" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/audio_button_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="60dp"
@@ -54,7 +54,7 @@
                 app:srcCompat="@drawable/night_sky2" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/audio_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="60dp"
