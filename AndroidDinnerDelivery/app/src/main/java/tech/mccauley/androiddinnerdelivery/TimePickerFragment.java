@@ -17,11 +17,20 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
+        // declaration
+        RangeTimePickerDialog deliveryTime;
+
         // get current time values
         Calendar c = Calendar.getInstance();
 
         //TimePickerDialog deliveryTime = new TimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_DARK,this, c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE), DateFormat.is24HourFormat(getActivity()));
-        RangeTimePickerDialog deliveryTime = new RangeTimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_DARK,this, c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE), DateFormat.is24HourFormat(getActivity()));
+
+        if (c.get(Calendar.HOUR_OF_DAY) < 17 || c.get(Calendar.HOUR_OF_DAY) > 22) {
+            deliveryTime = new RangeTimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_DARK,this, 17, c.get(Calendar.MINUTE), DateFormat.is24HourFormat(getActivity()));
+        } else {
+            deliveryTime = new RangeTimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_DARK,this, c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE), DateFormat.is24HourFormat(getActivity()));
+        }
+
         deliveryTime.setMax(23, 00);
         if (c.get(Calendar.HOUR_OF_DAY) > 17) {
             deliveryTime.setMin(c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE));
