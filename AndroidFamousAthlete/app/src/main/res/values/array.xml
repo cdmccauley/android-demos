@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="website_content">
+        <item>http://kaepernick7.com</item>
+    </string-array>
+
+    <string-array name="intro_content">
+        <item>Colin Rand Kaepernick\n\n</item>
+        <item>Colin Rand Kaepernick is an American football quarterback who is currently a free agent. Kaepernick played college football for the University of Nevada in Reno, where he was named the Western Athletic Conference (WAC) Offensive Player of the Year twice and became the only player in NCAA Division I FBS history to amass 10,000 passing yards and 4,000 rushing yards in a career. After graduating, he was selected by the San Francisco 49ers in the second round of the 2011 NFL Draft.</item>
+    </string-array>
+
+    <string-array name="bio_content">
+        <item>Name: Colin Rand Kaepernick\n</item>
+        <item>Born: November 3, 1987\n</item>
+        <item>Hometown: Turlock, California\n</item>
+        <item>Height: 6 ft 4 in\n</item>
+        <item>Weight: 230 lb\n</item>
+        <item>High School: Pitman\n</item>
+        <item>College: Nevada\n</item>
+        <item>NFL: San Francisco 49ers\n</item>
+        <item>Position: Quarterback\n</item>
+        <item>Touchdown–Int: 72–30\n</item>
+        <item>Passing yards: 12,271\n</item>
+        <item>Completion percentage: 59.8\n</item>
+        <item>Passer rating: 88.9\n</item>
+        <item>Rushing yards: 2,300\n</item>
+        <item>Rushing touchdowns: 13\n</item>
+    </string-array>
+
+</resources>

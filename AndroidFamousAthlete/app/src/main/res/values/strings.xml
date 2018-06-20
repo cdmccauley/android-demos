@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Famous Athlete: Colin Kaepernick</string>
+    <string name="title_item_detail">Item Detail</string>
+    <!--
+    <string name="details">details from resource</string>
+    <string name="intro_content">Colin Rand Kaepernick is an American football quarterback who is currently a free agent. Kaepernick played college football for the University of Nevada in Reno, where he was named the Western Athletic Conference (WAC) Offensive Player of the Year twice and became the only player in NCAA Division I FBS history to amass 10,000 passing yards and 4,000 rushing yards in a career. After graduating, he was selected by the San Francisco 49ers in the second round of the 2011 NFL Draft.</string>
+    <string name="bio_content">
+        Born: November 3, 1987\n
+        Hometown: Turlock, California\n
+        Touchdown–Int: 72–30\n
+        Passing yards: 12,271\n
+        Completion percentage: 59.8\n
+        Passer rating: 88.9\n
+        Rushing yards: 2,300\n
+        Rushing touchdowns: 13\n
+    </string>
+    -->
+</resources>
