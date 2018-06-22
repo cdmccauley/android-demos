@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidWorldFlags</string>
+    <string name="btn_start">Start Flags</string>
+    <string name="btn_stop">Stop Flags</string>
+</resources>

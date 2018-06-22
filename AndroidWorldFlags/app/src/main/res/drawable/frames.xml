@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/flag_us" android:duration="750" />
+    <item android:drawable="@drawable/flag_canada" android:duration="750" />
+    <item android:drawable="@drawable/flag_uk" android:duration="750" />
+    <item android:drawable="@drawable/flag_germany" android:duration="750" />
+    <item android:drawable="@drawable/flag_france" android:duration="750" />
+    <item android:drawable="@drawable/flag_australia" android:duration="750" />
+    <item android:drawable="@drawable/flag_japan" android:duration="750" />
+    <item android:drawable="@drawable/flag_korea" android:duration="750" />
+</animation-list>

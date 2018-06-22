@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_flags"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/frames"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btn_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btn_stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_start" />
+
+    <ImageView
+        android:id="@+id/iv_us"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_uk"
+        app:layout_constraintEnd_toStartOf="@+id/iv_canada"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag_us" />
+
+    <ImageView
+        android:id="@+id/iv_canada"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_france"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_us"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag_canada" />
+
+    <ImageView
+        android:id="@+id/iv_uk"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_germany"
+        app:layout_constraintEnd_toStartOf="@+id/iv_france"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_us"
+        app:srcCompat="@drawable/flag_uk" />
+
+    <ImageView
+        android:id="@+id/iv_france"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_australia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_uk"
+        app:layout_constraintTop_toBottomOf="@+id/iv_canada"
+        app:srcCompat="@drawable/flag_france" />
+
+    <ImageView
+        android:id="@+id/iv_germany"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_korea"
+        app:layout_constraintEnd_toStartOf="@+id/iv_australia"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_uk"
+        app:srcCompat="@drawable/flag_germany" />
+
+    <ImageView
+        android:id="@+id/iv_australia"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_japan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_germany"
+        app:layout_constraintTop_toBottomOf="@+id/iv_france"
+        app:srcCompat="@drawable/flag_australia" />
+
+    <ImageView
+        android:id="@+id/iv_korea"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toStartOf="@+id/iv_japan"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_germany"
+        app:srcCompat="@drawable/flag_korea" />
+
+    <ImageView
+        android:id="@+id/iv_japan"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btn_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_korea"
+        app:layout_constraintTop_toBottomOf="@+id/iv_australia"
+        app:srcCompat="@drawable/flag_japan" />
+</android.support.constraint.ConstraintLayout>
