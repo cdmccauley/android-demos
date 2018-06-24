@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Home Mortgage Interest"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_label_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Payment:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/monthly_et"
+        app:layout_constraintEnd_toEndOf="@+id/main_label_tv2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/monthly_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/years_et"
+        app:layout_constraintEnd_toEndOf="@+id/years_et"
+        app:layout_constraintStart_toStartOf="@+id/years_et"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_tv" />
+
+    <TextView
+        android:id="@+id/main_label_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loan Duration: (Years)"
+        app:layout_constraintBaseline_toBaselineOf="@+id/years_et"
+        app:layout_constraintEnd_toStartOf="@+id/years_et"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/years_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/principal_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_label_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/monthly_et" />
+
+    <TextView
+        android:id="@+id/main_label_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Initial Principal:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/principal_et"
+        app:layout_constraintEnd_toEndOf="@+id/main_label_tv2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/principal_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/compute_btn"
+        app:layout_constraintEnd_toEndOf="@+id/years_et"
+        app:layout_constraintStart_toStartOf="@+id/years_et"
+        app:layout_constraintTop_toBottomOf="@+id/years_et" />
+
+    <Button
+        android:id="@+id/compute_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Compute Interest"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_iv"
+        app:layout_constraintEnd_toEndOf="@+id/years_et"
+        app:layout_constraintStart_toStartOf="@+id/main_label_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/principal_et" />
+
+    <ImageView
+        android:id="@+id/main_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compute_btn"
+        app:srcCompat="@drawable/mortgage" />
+
+</android.support.constraint.ConstraintLayout>
