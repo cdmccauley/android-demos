@@ -14,7 +14,7 @@
         android:text="Arrival Calculator"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="#006f96"
+        android:textColor="@color/amtrakBlue"
         android:textStyle="bold"
         app:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Boarding Time:"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBaseline_toBaselineOf="@+id/boarding_et"
         app:layout_constraintEnd_toEndOf="@+id/textView5" />
 
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trip Length: (Minutes)"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBaseline_toBaselineOf="@+id/trip_et"
         app:layout_constraintEnd_toStartOf="@+id/trip_et"
         app:layout_constraintHorizontal_bias="0.5"
