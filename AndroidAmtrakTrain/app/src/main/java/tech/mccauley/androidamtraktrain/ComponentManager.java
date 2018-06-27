@@ -76,6 +76,12 @@ public class ComponentManager {
         }
     }
 
+    protected void SetEditTextLongClickable(String key, boolean value) {
+        if (editTextComponents.containsKey(key)) {
+            editTextComponents.get(key).setLongClickable(value);
+        }
+    }
+
     /*
      *  overriders
      */

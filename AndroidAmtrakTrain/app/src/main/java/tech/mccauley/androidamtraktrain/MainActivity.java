@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         // boarding_et
         cm.PutEditTextComponent("boardingEt", (EditText)findViewById(R.id.boarding_et));
+        cm.SetEditTextLongClickable("boardingEt", false);
         cm.OverrideBoardingEtOnClick(this);
 
         // trip_et

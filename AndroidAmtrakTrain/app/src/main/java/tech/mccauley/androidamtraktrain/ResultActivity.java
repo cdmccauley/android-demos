@@ -33,7 +33,7 @@ public class ResultActivity extends AppCompatActivity {
         cm.PutTextViewComponent("redEyeTv", (TextView)findViewById(R.id.red_eye_tv));
         cm.PutImageViewComponent("redEyeIv", (ImageView)findViewById(R.id.red_eye_iv));
 
-        if (c.get(c.HOUR_OF_DAY) >= 0 && c.get(c.HOUR_OF_DAY) <= 7) {
+        if (c.get(c.HOUR_OF_DAY) >= 0 && c.get(c.HOUR_OF_DAY) < 7) {
             cm.ShowRedEye();
         }
     }
