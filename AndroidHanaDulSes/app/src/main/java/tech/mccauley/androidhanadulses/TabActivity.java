@@ -1,12 +1,10 @@
 package tech.mccauley.androidhanadulses;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,8 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TabActivity extends AppCompatActivity {
 
@@ -50,6 +48,11 @@ public class TabActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        Intent i = getIntent();
+        if (i.hasExtra("quizTab")) {
+            mViewPager.setCurrentItem(i.getExtras().getInt("quizTab"));
+        }
 
     }
 
@@ -102,19 +105,42 @@ public class TabActivity extends AppCompatActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) { // THIS IS WHERE THE FRAGMENT IS BEING LOADED
-            View rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            RecyclerView rv;
+            RecyclerView.LayoutManager rvlm;
+            RecyclerView.Adapter rva;
 
-            // DEBUGGING !!!!!!
-            RecyclerView rv = rootView.findViewById(R.id.fragment_tab_rv);
-            RecyclerView.LayoutManager rvlm = new LinearLayoutManager(rootView.getContext());
-            rv.setLayoutManager(rvlm);
-            RecyclerView.Adapter rva = new FlashRvAdapter();
-            rv.setAdapter(rva);
-            // END DEBUGGING !!!!!!
+            View rootView;
 
-//            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
+                case 1:
+                    rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+                    rv = rootView.findViewById(R.id.fragment_tab_rv);
+                    rvlm = new LinearLayoutManager(rootView.getContext());
+                    rv.setLayoutManager(rvlm);
+                    rva = new LearnRvAdapter();
+                    rv.setAdapter(rva);
+                    break;
+                case 2:
+                    rootView = inflater.inflate(R.layout.fragment_tab, container, false);
+                    rv = rootView.findViewById(R.id.fragment_tab_rv);
+                    rvlm = new LinearLayoutManager(rootView.getContext());
+                    rv.setLayoutManager(rvlm);
+                    rva = new QuizRvAdapter();
+                    rv.setAdapter(rva);
+                    break;
+                case 3:
+                    rootView = inflater.inflate(R.layout.fragment_resources, container, false);
+                    TextView tv = rootView.findViewById(R.id.resources_tv);
+                    tv.setText("case: 2");
+                    break;
+                default:
+                    // error, maybe init to a layout for error ??
+                    rootView = inflater.inflate(R.layout.fragment_resources, container, false);
+                    tv = rootView.findViewById(R.id.resources_tv);
+                    tv.setText("case: default");
+                    break;
+            }
 
             return rootView;
         }

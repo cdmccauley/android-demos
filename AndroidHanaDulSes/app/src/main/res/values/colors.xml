@@ -7,7 +7,9 @@
     -->
     <color name="colorPrimary">@color/taegukBlue</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">@color/taegukBlue</color>
+    <color name="white">#FFFFFF</color>
     <color name="taegukRed">#C60C30</color>
     <color name="taegukBlue">#003478</color>
+    <color name="taegukBlueAlpha">#80003478</color>
 </resources>

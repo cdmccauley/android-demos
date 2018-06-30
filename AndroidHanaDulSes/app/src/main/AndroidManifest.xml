@@ -20,7 +20,21 @@
         <activity
             android:name=".TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LearnActivity"
+            android:parentActivityName=".TabActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TabActivity" />
+        </activity>
+        <activity
+            android:name=".QuizActivity"
+            android:parentActivityName=".TabActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".TabActivity" />
+        </activity>
     </application>
 
 </manifest>
