@@ -152,6 +152,8 @@ public class TabActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        final String[] TAB_TITLES = new String[] { "Learn", "Quiz", "Resources" };
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -165,14 +167,13 @@ public class TabActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            return TAB_TITLES.length;
         }
 
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Tab " + Integer.toString(position); // THIS IS WHERE NAMES ARE GIVEN TO THE TABS !!!!!!
+            return TAB_TITLES[position];
         }
     }
 }

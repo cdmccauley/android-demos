@@ -25,10 +25,16 @@ public class QuizRvAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+        String itemTitle = LanguageManager.getInstance().getCategoryNames().get(position);
+        TextView rvItemTv = holder.itemView.findViewById(R.id.rv_item_tv);
+        rvItemTv.setText(itemTitle.substring(0, 1).toUpperCase() + itemTitle.substring(1));
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), QuizActivity.class);
+                // put title name for data extraction
                 v.getContext().startActivity(i);
             }
         });
@@ -36,6 +42,6 @@ public class QuizRvAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 3; // HARDCODED NUMBER OF RV ITEMS !!!!!!
+        return LanguageManager.getInstance().getCategoryNames().size();
     }
 }
