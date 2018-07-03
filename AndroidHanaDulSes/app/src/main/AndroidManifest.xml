@@ -20,17 +20,20 @@
         <activity
             android:name=".TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation"/>
         <activity
             android:name=".LearnActivity"
-            android:parentActivityName=".TabActivity">
+            android:parentActivityName=".TabActivity"
+            android:configChanges="orientation">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TabActivity" />
         </activity>
         <activity
             android:name=".QuizActivity"
-            android:parentActivityName=".TabActivity">
+            android:parentActivityName=".TabActivity"
+            android:configChanges="orientation">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".TabActivity" />

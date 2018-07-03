@@ -5,17 +5,20 @@ import java.util.HashMap;
 
 public class LanguageManager {
 
+    // declarations
     private static LanguageManager instance;
     final private String FAMILY = "family";
     final private String ANIMALS = "animals";
     final private String PLACES = "places";
     private HashMap<String, HashMap<String, String>> languageCategories;
 
+    // constructor
     private LanguageManager() {
         languageCategories = new HashMap<>();
         setLanguageCategories();
     }
 
+    // getinstance
     public static LanguageManager getInstance() {
         if (instance == null) {
             instance = new LanguageManager();
@@ -23,6 +26,7 @@ public class LanguageManager {
         return instance;
     }
 
+    // set words in category
     private void setLanguageCategories() {
         if (!languageCategories.containsKey(FAMILY)) {
             HashMap<String, String> familyWords = new HashMap<>();
@@ -62,6 +66,7 @@ public class LanguageManager {
         }
     }
 
+    // get category names
     protected ArrayList<String> getCategoryNames() {
         ArrayList<String> categoryNames = new ArrayList<>();
 
@@ -70,13 +75,19 @@ public class LanguageManager {
         return categoryNames;
     }
 
+    // get category words
     protected HashMap getCategory(String category) {
         return languageCategories.get(category);
     }
 
+    // check equality between languages
     protected boolean CheckAnswer(String category, String english, String korean) {
-        if (getCategory(category).get(english).equals(korean)) {
-            return true;
+        if (getCategory(category).containsKey(english)) {
+            if (getCategory(category).get(english).equals(korean)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }

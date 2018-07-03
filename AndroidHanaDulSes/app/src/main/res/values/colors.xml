@@ -12,4 +12,6 @@
     <color name="taegukRed">#C60C30</color>
     <color name="taegukBlue">#003478</color>
     <color name="taegukBlueAlpha">#80003478</color>
+    <color name="greenAlpha">#8000ff00</color>
+    <color name="redAlpha">#80FF0000</color>
 </resources>

@@ -1,6 +1,7 @@
 package tech.mccauley.androidhanadulses;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class TabActivity extends AppCompatActivity {
 
@@ -114,6 +114,7 @@ public class TabActivity extends AppCompatActivity {
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
+                    // learn recyclerview
                     rootView = inflater.inflate(R.layout.fragment_tab, container, false);
                     rv = rootView.findViewById(R.id.fragment_tab_rv);
                     rvlm = new LinearLayoutManager(rootView.getContext());
@@ -122,6 +123,7 @@ public class TabActivity extends AppCompatActivity {
                     rv.setAdapter(rva);
                     break;
                 case 2:
+                    // quiz recyclerview
                     rootView = inflater.inflate(R.layout.fragment_tab, container, false);
                     rv = rootView.findViewById(R.id.fragment_tab_rv);
                     rvlm = new LinearLayoutManager(rootView.getContext());
@@ -130,19 +132,30 @@ public class TabActivity extends AppCompatActivity {
                     rv.setAdapter(rva);
                     break;
                 case 3:
+                    // resources fragment
                     rootView = inflater.inflate(R.layout.fragment_resources, container, false);
-                    TextView tv = rootView.findViewById(R.id.resources_tv);
-                    tv.setText("case: 2");
+                    // set on clicks
+                    SetResourceTvOnClick((TextView)rootView.findViewById(R.id.resource1_tv), "https://www.youtube.com/user/koreanclass101");
+                    SetResourceTvOnClick((TextView)rootView.findViewById(R.id.resource2_tv), "https://www.youtube.com/user/GoBillyKorean");
+                    SetResourceTvOnClick((TextView)rootView.findViewById(R.id.resource3_tv), "https://www.youtube.com/channel/UCcA88_Z7wQWMoQ9bKwjuanA");
                     break;
                 default:
-                    // error, maybe init to a layout for error ??
-                    rootView = inflater.inflate(R.layout.fragment_resources, container, false);
-                    tv = rootView.findViewById(R.id.resources_tv);
-                    tv.setText("case: default");
+                    // displays error
+                    rootView = inflater.inflate(R.layout.fragment_tab_error, container, false);
                     break;
             }
 
             return rootView;
+        }
+
+        public void SetResourceTvOnClick(TextView textView, final String Url) {
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent webLoadIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Url));
+                    getActivity().startActivity(webLoadIntent);
+                }
+            });
         }
     }
 
